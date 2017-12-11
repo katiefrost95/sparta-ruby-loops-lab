@@ -8,15 +8,19 @@ end
 
 # return all the even numbers less than the given number
 def even_numbers_less_than num
-  i = 0
-  (0..10).each do |i|
+  array_even = []
+  for i in 0...num #for each element between 0 and the argument supplied will do this
     if i%2==0
-      puts "#{num}"
+      array_even.push(i)
+    end
   end
+  return array_even
 end
 
 # return the average of all numbers in an array
 def average numbers
-  average = [8,2,3,3]
-  average.instance_eval { reduce(:+) / size.to_f }
+  average = numbers.reduce 0 do |total, number|
+    sum = (total + number)
+  end
+  ave / numbers.length.to_f
 end
